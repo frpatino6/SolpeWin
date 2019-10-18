@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>994986165693-3q91g49qu55e12p9rpajtanvn1b6b82f.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.994986165693-3q91g49qu55e12p9rpajtanvn1b6b82f</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBzwd8M95Czh-NX3DL8-Td8btICH9EHHew</string>
+	<key>GCM_SENDER_ID</key>
+	<string>994986165693</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.nativescript.solpercn</string>
+	<key>PROJECT_ID</key>
+	<string>rcnsolpe</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rcnsolpe.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:994986165693:ios:37defef1e89d9419</string>
+	<key>DATABASE_URL</key>
+	<string>https://rcnsolpe.firebaseio.com</string>
+</dict>
+</plist>

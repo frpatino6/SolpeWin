@@ -1,0 +1,6 @@
+{
+    "external_push_client_only": true,
+    "using_ios": true,
+    "using_android": true,
+    "realtimedb": false
+}

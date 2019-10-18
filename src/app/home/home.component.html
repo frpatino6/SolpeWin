@@ -1,0 +1,59 @@
+<ActionBar title="" class="action-bar">
+</ActionBar>
+
+<TabView id="tabViewContainer">
+    <PullToRefresh (refresh)="refreshListSolpe($event)" *tabItem="TitleTabSolpe">
+        <ListView [items]="dataSolpe">
+            <ng-template let-item="item" nsTemplateKey="transaction">
+                <GridLayout xmlns:Card="nativescript-cardview">
+                    <Card:CardView class="cardStyle" margin="5" elevation="40" radius="5">
+                        <StackLayout class="card-layout">
+                            <Label class="h4 label-title" [text]="item.texto"></Label>
+                            <GridLayout rows="*, *, *, *, *,*" columns="*, 2*" class="form">
+                                <Label row="0" col="0" text="SOL.PEDIDO:" horizontalAlignment="left" class="label" />
+                                <Label row="0" col="1" [text]="item.numero" class="body" />
+                                <Label row="4" col="0" text="CANTIDAD:" horizontalAlignment="left" class="label" />
+                                <Label row="4" col="1" [text]="item.cantidad" class="body" />
+                                <Label row="1" col="0" text="POSICION:" horizontalAlignment="left" class="label" />
+                                <Label row="1" col="1" [text]="item.posicion" class="body" />
+                                <Label row="2" col="0" text="PRODUCCIÓN:" horizontalAlignment="left" class="label" />
+                                <Label row="2" col="1" [text]="item.destino" class="destino" />
+                                <Label row="3" col="0" text="PROVEEDOR:" horizontalAlignment="left" class="label" />
+                                <Label row="3" col="1" [text]="item.proveedor" class="destino" />
+                                <Label row="5" col="0" text="VALOR:" horizontalAlignment="left" class="label" />
+                                <Label row="5" col="1" [text]="parseCurrencyFormat(item.valor)" class="body" />
+                            </GridLayout>
+                            <button text="Liberar" (tap)="onClick(item.numero,item.posicion)" row="2" col="1" class="action-button-solpe" />
+                        </StackLayout>
+                    </Card:CardView>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+    </PullToRefresh>
+
+    <PullToRefresh (refresh)="refreshListSolpe($event)" *tabItem="TitleTabPedidos">
+        <ListView [items]="dataGroupPedidos">
+            <ng-template let-item="item" nsTemplateKey="transaction">
+                <GridLayout xmlns:Card="nativescript-cardview">
+                    <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
+                        <StackLayout class="card-layout">
+                            <Label class="h3 label-title" [text]="item.texto"></Label>
+                            <GridLayout rows="*, *, *, *, *" columns="*, *" class="form">
+                                <Label row="0" col="0" text="PEDIDO #:" horizontalAlignment="left" class="label" />
+                                <Label row="0" col="1" [text]="item.numero" class="body" />
+                                <Label row="1" col="0" text="LINEAS:" horizontalAlignment="left" class="label" />
+                                <Label row="1" col="1" [text]="getLineas(item.numero)" class="body" />
+                                <Label row="2" col="0" text="VALOR TOTAL:" horizontalAlignment="left" class="label" />
+                                <Label row="2" col="1" [text]="getTotal(item.numero)" class="body" />
+                            </GridLayout>
+                            <GridLayout columns="1*,2*" rows="2*,3*" width="300">
+                                <button row="0" col="0" text="Detalle" style="margin-left: 15px" (tap)="onClickDetailView(item.numero)" class="action-button-solpe" />
+                                <button row="0" col="1" text="Liberar" (tap)="onClickPedido(item.numero)" class="action-button-solpe" />
+                            </GridLayout>
+                        </StackLayout>
+                    </Card:CardView>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+    </PullToRefresh>
+</TabView>

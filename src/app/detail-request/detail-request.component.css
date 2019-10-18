@@ -1,0 +1,68 @@
+.home-panel{
+    vertical-align: center; 
+    font-size: 14;
+    margin: 15;
+}
+
+.description-label{
+    margin-bottom: 15;
+}
+
+
+.table {
+    width: 100%;
+    background-color: #fff
+}
+
+.table-standings {
+    border-width: 1 1 1 1;
+    border-color: #e6eef4
+}
+
+.table-standings Label {
+    white-space: nowrap;
+    font-size: 15;
+    color: #5c6265;
+    vertical-align: middle
+}
+
+.table-standings .th {
+    background-color: #e6eef4
+}
+
+.table-standings .th Label {
+    color: #00476d
+}
+
+.table-standings .th,
+.table-standings .td {
+    padding: 10;
+    border-bottom-width: 1;
+    border-color:transparent;
+}
+
+.table-standings .Z,
+.table-standings .V,
+.table-standings .R,
+.table-standings .P,
+.table-standings .S,
+.table-standings .B {
+    text-align: center
+}
+
+.table-standings .team {
+    orientation: horizontal
+}
+.labelNumeroPedido{
+    font-size: 15px;
+    color:brown;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+.labeldestino{
+    font-size: 13px  !important;
+    color:saddlebrown  !important;
+    text-align: center;
+    font-style: italic;
+}
