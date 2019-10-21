@@ -1,14 +1,17 @@
 .card {
     background-color: #fff;
-    color: #4d4d4d;
+    color: transparent;
     margin: 8 8 0;
 }
+
 .card-layout {
     padding: 10;
 }
+
 .card-layout .h1 {
     margin-bottom: 10;
 }
+
 .page {
     background-color: rgb(237, 237, 237);
 }
@@ -17,29 +20,44 @@
     background-color: #fff;
     color: rgb(43, 43, 43);
 }
-.label{
+
+.label {
     font-weight: bold;
 }
-.label-title{
+
+.label-title {
     font-weight: bold;
     color: #ef5350;
     text-align: center;
     font-size: 14px;
 }
+
 .cardContent {
     padding: 20;
     font-weight: bold;
     font-size: 30;
 }
-.body{
+
+.body {
     font-size: 16px;
 }
-.destino{
+
+.destino {
     font-size: 14px;
 }
 
-
 .my-button:active {
     background-color: lightslategray;
-    color:white;
+    color: white;
+}
+
+ListView {
+    background-color: lightslategray;
+}
+
+#tabViewContainer {
+    background-color: lightslategray;
+    align-items: center;
+    flex-direction: column;
+    color: white;
 }

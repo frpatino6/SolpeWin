@@ -13,7 +13,7 @@ android {
    flavorDimensions "version"
   defaultConfig {  
     generatedDensities = []
-         applicationId = "org.nativescript.solpercn"  
+         applicationId = "org.nativescript.solpercnWin"  
             multiDexEnabled true
   }    
   aaptOptions {  

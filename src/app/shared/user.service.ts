@@ -11,8 +11,8 @@ import { User } from "./user.model";
 export class UserService {
   constructor(private http: HttpClient) { }
 
-   private serverUrl = "https://solpe.rcntv.com.co:442/login/ValidateUser/";
-  //private serverUrl = "http://192.168.0.6/solpe/login/ValidateUser/";
+   //private serverUrl = "https://solpe.rcntv.com.co:442/login/ValidateUser/";
+  private serverUrl = "http://192.168.0.6/solpe/login/ValidateUser/";
   register(user: User) {
     
   }

@@ -24,6 +24,32 @@ const getCircularReplacer = () => {
     return value;
   };
 };
+const options: OptionsCommon = {
+  message: 'Autenticando...',  
+  progress: 0.65,
+  margin: 10,
+  dimBackground: true,
+  color: '#4B9ED6', // color of indicator and labels
+  // background box around indicator
+  // hideBezel will override this if true
+  backgroundColor: 'yellow',
+  userInteractionEnabled: false, // default true. Set false so that the touches will fall through it.
+  hideBezel: true, // default false, can hide the surrounding bezel
+  mode: Mode.AnnularDeterminate, // see options below
+  android: {
+    
+    cancelable: true,
+    cancelListener: function(dialog) {
+      console.log('Loading cancelled');
+    }
+  },
+  ios: {
+    
+    square: false
+  }
+};
+
+
 const indicator = new LoadingIndicator();
 
 require("nativescript-localstorage");
@@ -56,11 +82,11 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.doRegisterPushHandlers();
 
    
-    this.user.email = ""; 
-    this.user.password = ""; 
+    /*this.user.email = ""; 
+    this.user.password = ""; */
 
-    /*this.user.email = "frodriguezp"; 
-    this.user.password = "bogota1*"; */
+    this.user.email = "frodriguezp"; 
+    this.user.password = "bogota1*"; 
   }
   private pushSettings = {
     // Android settings
@@ -209,13 +235,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   login() {   
     this.doGetCurrentPushToken();
     this.user.accessToken = this._token;
-    indicator.show({
-      message: 'Verificando credenciales...',
-      dimBackground: false,
-      hideBezel: false,
-      color: '#4B9ED6'
-
-    });
+    indicator.show(options);
 
     this.userService.login(this.user)   
       .subscribe((result) => {

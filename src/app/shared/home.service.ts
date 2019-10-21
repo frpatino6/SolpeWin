@@ -15,10 +15,10 @@ export class HomeService {
 
     }
 
-     private serverUrl = "https://solpe.rcntv.com.co:444/solpe/GetLiberaSolpes/";
-     private serverDatabaseUrl = "https://solpe.rcntv.com.co:444/solpe/"
-    //private serverUrl = "http://192.168.0.6/solpeoracle/solpe/GetLiberaSolpes/";
-    //private serverDatabaseUrl = "http://192.168.0.6/solpeoracle/solpe/"
+    /* private serverUrl = "https://solpe.rcntv.com.co:444/solpe/GetLiberaSolpes/";
+     private serverDatabaseUrl = "https://solpe.rcntv.com.co:444/solpe/"*/
+    private serverUrl = "http://192.168.0.6/solpeoracle/solpe/GetLiberaSolpes/";
+    private serverDatabaseUrl = "http://192.168.0.6/solpeoracle/solpe/"
 
     changesearchTaskCriteriak(searchText: string) {
         this.onChange.emit(searchText);

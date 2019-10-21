@@ -6,7 +6,7 @@
         <ListView [items]="dataSolpe">
             <ng-template let-item="item" nsTemplateKey="transaction">
                 <GridLayout xmlns:Card="nativescript-cardview">
-                    <Card:CardView class="cardStyle" margin="5" elevation="40" radius="5">
+                    <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
                         <StackLayout class="card-layout">
                             <Label class="h4 label-title" [text]="item.texto"></Label>
                             <GridLayout rows="*, *, *, *, *,*" columns="*, 2*" class="form">
@@ -37,7 +37,7 @@
                 <GridLayout xmlns:Card="nativescript-cardview">
                     <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
                         <StackLayout class="card-layout">
-                            <Label class="h3 label-title" [text]="item.texto"></Label>
+                            <Label class="h4 label-title" [text]="item.texto"></Label>
                             <GridLayout rows="*, *, *, *, *" columns="*, *" class="form">
                                 <Label row="0" col="0" text="PEDIDO #:" horizontalAlignment="left" class="label" />
                                 <Label row="0" col="1" [text]="item.numero" class="body" />

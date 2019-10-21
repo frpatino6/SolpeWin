@@ -1,28 +1,33 @@
-.home-panel{
-    vertical-align: center; 
+.page {
+    background-color: lightslategray;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.home-panel {
+    vertical-align: center;
     font-size: 14;
     margin: 15;
 }
 
-.description-label{
+.description-label {
     margin-bottom: 15;
 }
 
-
 .table {
     width: 100%;
-    background-color: #fff
+    background-color: lightslategray;
 }
 
-.table-standings {
-    border-width: 1 1 1 1;
-    border-color: #e6eef4
+.table-standings-header {
+    background-color: lightslategray;
 }
 
 .table-standings Label {
     white-space: nowrap;
     font-size: 15;
-    color: #5c6265;
+    color: #e6eef4;
     vertical-align: middle
 }
 
@@ -38,7 +43,7 @@
 .table-standings .td {
     padding: 10;
     border-bottom-width: 1;
-    border-color:transparent;
+    border-color: transparent;
 }
 
 .table-standings .Z,
@@ -53,16 +58,18 @@
 .table-standings .team {
     orientation: horizontal
 }
-.labelNumeroPedido{
+
+.labelNumeroPedido {
     font-size: 15px;
-    color:brown;
+    color: rgb(236, 236, 236);
     text-align: center;
     font-style: italic;
     margin-top: 10px;
 }
-.labeldestino{
-    font-size: 13px  !important;
-    color:saddlebrown  !important;
+
+.labeldestino {
+    font-size: 13px !important;
+    color: saddlebrown !important;
     text-align: center;
     font-style: italic;
 }

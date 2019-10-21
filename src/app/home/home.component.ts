@@ -23,7 +23,6 @@ const indicator = new LoadingIndicator();
 
 const options: OptionsCommon = {
     message: 'Cargando Solpes y pedidos',
-    details: '',
     progress: 0.65,
     margin: 10,
     dimBackground: true,
@@ -35,17 +34,17 @@ const options: OptionsCommon = {
     hideBezel: true, // default false, can hide the surrounding bezel
     mode: Mode.AnnularDeterminate, // see options below
     android: {
-        // view: someStackLayout.android, // Target view to show on top of (Defaults to entire window)
-        cancelable: false,
-        cancelListener: function (dialog) {
-            console.log('Loading cancelled');
-        }
+      
+      cancelable: true,
+      cancelListener: function(dialog) {
+        console.log('Loading cancelled');
+      }
     },
     ios: {
-        // view: someButton.ios, // Target view to show on top of (Defaults to entire window)
-        square: false
+      
+      square: false
     }
-};
+  };
 require("nativescript-localstorage");
 
 const formatter = new Intl.NumberFormat('en-US', {
@@ -132,12 +131,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     GetOrderByUser() {
         var self = this;
-        indicator.show({
-            message: 'Cargando ordenes...',
-            dimBackground: true,
-            hideBezel: true,
-            color: '#4B9ED6'
-        });
+        indicator.show(options);
         var email = localStorage.getItem('emailUser')
         this.homeServices.getOrders(email)
             .subscribe((result) => {
