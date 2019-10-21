@@ -82,11 +82,11 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.doRegisterPushHandlers();
 
    
-    /*this.user.email = ""; 
-    this.user.password = ""; */
+    this.user.email = ""; 
+    this.user.password = ""; 
 
-    this.user.email = "frodriguezp"; 
-    this.user.password = "bogota1*"; 
+    /*this.user.email = "frodriguezp"; 
+    this.user.password = "bogota1*";*/ 
   }
   private pushSettings = {
     // Android settings
