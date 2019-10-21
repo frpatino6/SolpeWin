@@ -47,17 +47,10 @@
 }
 
 .my-button:active {
-    background-color: lightslategray;
+    background-color: #37474f;
     color: white;
 }
 
 ListView {
-    background-color: lightslategray;
-}
-
-#tabViewContainer {
-    background-color: lightslategray;
-    align-items: center;
-    flex-direction: column;
-    color: white;
+    background-color: #37474f;
 }

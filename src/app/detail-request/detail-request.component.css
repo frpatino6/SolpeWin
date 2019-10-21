@@ -1,5 +1,5 @@
 .page {
-    background-color: lightslategray;
+    background-color: #37474f;
     align-items: center;
     flex-direction: column;
     color: white;
@@ -17,11 +17,14 @@
 
 .table {
     width: 100%;
-    background-color: lightslategray;
+}
+
+.table-standings {
+    border-color: #e6eef4
 }
 
 .table-standings-header {
-    background-color: lightslategray;
+    border-color: #e6eef4
 }
 
 .table-standings Label {
@@ -31,16 +34,38 @@
     vertical-align: middle
 }
 
+.table-standings-header Label {
+    white-space: nowrap;
+    font-size: 17;
+    color: #ffffff;
+    vertical-align: middle
+}
+
 .table-standings .th {
     background-color: #e6eef4
+}
+
+.table-standings-header .th {
+    background-color: #62727b
 }
 
 .table-standings .th Label {
     color: #00476d
 }
 
+.table-standings-header .th Label {
+    color: #00476d
+}
+
 .table-standings .th,
 .table-standings .td {
+    padding: 10;
+    border-bottom-width: 1;
+    border-color: transparent;
+}
+
+.table-standings-header .th,
+.table-standings-header .td {
     padding: 10;
     border-bottom-width: 1;
     border-color: transparent;
@@ -61,7 +86,7 @@
 
 .labelNumeroPedido {
     font-size: 15px;
-    color: rgb(236, 236, 236);
+    color: #ffffff;
     text-align: center;
     font-style: italic;
     margin-top: 10px;
