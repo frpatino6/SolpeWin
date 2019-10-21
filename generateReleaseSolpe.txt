@@ -1,0 +1,1 @@
+tns build android --release --key-store-path E:\Rcn\SolpeWinSports\IxnetAndroidKeys.jks --key-store-password patatabraba --key-store-alias ixnetandroidkey --key-store-alias-password patatabraba
