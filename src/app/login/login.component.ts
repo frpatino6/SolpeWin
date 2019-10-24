@@ -88,27 +88,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     /*this.user.email = "frodriguezp"; 
     this.user.password = "bogota1*";*/ 
   }
-  private pushSettings = {
-    // Android settings
-    senderID: "984049361003", // Android: Required setting with the sender/project number
-    notificationCallbackAndroid: (stringifiedData: String, fcmNotification: any) => {
-      const notificationBody = fcmNotification && fcmNotification.getBody();
-      console.log("Message received!\n" + notificationBody + "\n" + stringifiedData);
-    },
-
-    // iOS settings
-    badge: true, // Enable setting badge through Push Notification
-    sound: true, // Enable playing a sound
-    alert: true, // Enable creating a alert
-    notificationCallbackIOS: (message: any) => {
-      console.log("Message received!\n" + JSON.stringify(message));
-
-    }
-  };
 
 
-   // You could add these handlers in 'init', but if you want you can do it seperately as well.
-  // The benefit being your user will not be confronted with the "Allow notifications" consent popup when 'init' runs.
   public doRegisterPushHandlers(): void {
     // note that this will implicitly register for push notifications, so there's no need to call 'registerForPushNotifications'
     messaging.addOnPushTokenReceivedCallback(

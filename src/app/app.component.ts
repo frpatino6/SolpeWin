@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import * as firebase from 'nativescript-plugin-firebase';
 import { HomeService } from "./shared/home.service";
 
 @Component({
