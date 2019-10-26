@@ -189,7 +189,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                     this.pullRefresh.refreshing = false;
             }, (error) => {
                 indicator.hide();
-                this.showMessageDialog(error.message)
+                this.showMessageDialog(error.error)
             });
     }
 
