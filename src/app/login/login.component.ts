@@ -227,7 +227,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         indicator.hide();
       }, (error) => {              
         indicator.hide();
-        this.showMessageDialog(error.message)
+        this.showMessageDialog(error.error)
       });
   }
 
