@@ -106,11 +106,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         console.log("Push message received in push-view-model: " + JSON.stringify(message, getCircularReplacer()));
 
         setTimeout(() => {
-          alert({
-            title: "Push message!",
-            message: (message !== undefined && message.title !== undefined ? message.title : ""),
-            okButtonText: "Sw33t"
-          });
+        
         }, 500);
       }
   ).then(() => {
