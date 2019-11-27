@@ -154,6 +154,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                         valor: _.get(_.find(v, 'valor'), 'valor'),
                         estado: _.get(_.find(v, 'estado'), 'estado'),
                         proveedor: _.get(_.find(v, 'proveedor'), 'proveedor'),
+                        moneda:  _.get(_.find(v, 'moneda'), 'moneda'),
                     };
 
                 }).value();
@@ -172,7 +173,8 @@ export class HomeComponent implements OnInit, OnDestroy {
                         posicion: _.get(_.find(v, 'posicion'), 'posicion'),
                         valor: _.get(_.find(v, 'valor'), 'valor'),
                         estado: _.get(_.find(v, 'estado'), 'estado'),
-                        proveedor: _.get(_.find(v, 'proveedor'), 'proveedor')
+                        proveedor: _.get(_.find(v, 'proveedor'), 'proveedor'),
+                        moneda:  _.get(_.find(v, 'moneda'), 'moneda'),
                     };
 
                 }).value();
@@ -219,17 +221,11 @@ export class HomeComponent implements OnInit, OnDestroy {
             queryParams: {
                 'pedidoDetails': JSON.stringify(this.dataPedidos.filter(e => e.numero == numeroPedido)),
                 'groupPedidoDetails': JSON.stringify(this.dataGroupPedidos.filter(e => e.numero == numeroPedido)),
-                'totalPedido': this.getTotal(numeroPedido)
+                'totalPedido': this.getTotal(numeroPedido),
+                'moneda': this.dataPedidos.filter(e => e.numero == numeroPedido)[0].moneda
             }
         }
-
         this.routerExtensions.navigate(["/detail"], navigationExtras);
-        // indicator.show({
-        //     message: 'Cargando detalle del pedido...',
-        //     dimBackground: true,
-        //     hideBezel: true,
-        //     color: '#4B9ED6'
-        // });
     }
     onClickPedido(numero) {
         indicator.show({
@@ -257,11 +253,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         var result = 0;
         this.dataPedidos.filter(e => e.numero == numeroPedido).forEach(element => {
             result += element.valor * element.cantidad;
+            console.log("element" + element.moneda);
         });
         return this.currencyPipe.transform(result);
     }
     parseCurrencyFormat(value) {
-        return this.currencyPipe.transform(value);
+        return `${this.currencyPipe.transform(value)}`;
     }
 
     showMessageDialog(message) {

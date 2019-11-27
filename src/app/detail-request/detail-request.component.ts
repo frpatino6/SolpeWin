@@ -29,10 +29,10 @@ export class DetailRequestComponent implements OnInit, OnDestroy {
   public dataGroupPedidos: Orders[] = new Array();
   public numeroPedido = ""
   public totalPedido = 0;
-
+  public currentCurrency: string;
 
   constructor(
-    private currencyPipe: CurrencyPipe,
+    private currencyPipe: CurrencyPipe,   
     private router: RouterExtensions,
     private _router: Router,
     private page: Page,
@@ -44,7 +44,8 @@ export class DetailRequestComponent implements OnInit, OnDestroy {
     this.route.queryParams.subscribe(params => {
       self.dataPedidos = JSON.parse(params["pedidoDetails"]);
       self.dataGroupPedidos = JSON.parse(params["groupPedidoDetails"]);
-      console.log("Pedidos recibidos " + self.dataGroupPedidos[0])
+      self.currentCurrency = params["moneda"];
+      console.log("Pedidos recibidos " + self.currentCurrency + self.dataGroupPedidos[0])
 
       self.totalPedido = params["totalPedido"];
       if (self.dataPedidos.length > 0)
