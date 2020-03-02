@@ -30,3 +30,8 @@ components that have the btn class name.
     vertical-align: middle;
     width: 60%;
 }
+
+TextField {
+    background-color: transparent;
+    placeholder-color: #ffffff;
+}

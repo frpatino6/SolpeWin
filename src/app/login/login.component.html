@@ -11,7 +11,6 @@
                 <TextField #password class="input" [isEnabled]="!processing" hint="Contraseña" secure="true" [(ngModel)]="user.password" [returnKeyType]="isLoggingIn ? 'done' : 'next'" (returnPress)="focusConfirmPassword()"></TextField>
                 <StackLayout class="hr-light"></StackLayout>
             </StackLayout>
-
             <StackLayout row="2" *ngIf="!isLoggingIn" class="input-field">
                 <TextField #confirmPassword class="input" [isEnabled]="!processing" hint="Confirm password" secure="true" [(ngModel)]="user.confirmPassword" returnKeyType="done"></TextField>
                 <StackLayout class="hr-light"></StackLayout>
@@ -32,7 +31,7 @@
     </Label>
     <Label (tap)="toggleForm()">
         <FormattedString>
-            <Span [text]="isLoggingIn ? 'Version 2.3.0' : ''" class=""></Span>
+            <Span [text]="isLoggingIn ? 'Version 2.5.0' : ''" class=""></Span>
         </FormattedString>
     </Label>
 </FlexboxLayout>
